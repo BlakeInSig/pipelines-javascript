@@ -29,3 +29,5 @@ steps:
   inputs: 
     pathtoPublish: $(Build.ArtifactStagingDirectory) # dist or build files
     ArtifactName: 'www' # output artifact named www
+  condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/main'))))
+    
